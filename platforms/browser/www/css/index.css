@@ -87,7 +87,7 @@ h1 {
   position: fixed;
   width: 100%;
   height: 10vh;
-  background-color:#16A085;
+  background-color:#2C3E50;
   z-index: 1;
 }
 
@@ -102,42 +102,54 @@ h1 {
   position: absolute;
   margin-top: 10vh;
   width: 25vw;
-  height: 100vh;
+  height: 90vh;
+}
+
+#main_background {
+  height: 59vh;
+  background-color:#ABB2B9;
+  padding-top: 1vh;
 }
 
 .button {
   font-family: 'Roboto', sans-serif;
-  background-color:#599bb3;
 	font-size: 2rem;
 	text-decoration:none;
   display: block;
-  width: 25vw;
-  height: 9vh;
+  width: 20vw;
+  height: 8vh;
   padding: 0;
-  border: none;
-  color: white;
+  background-color:white;
+  margin: 0 auto;
+  border-style: solid;
+  border-width: medium;
+  border-radius: 4px;
+  margin-top: 1vh;
 }
 
-#button1 {
-  background-color:#599bb3;
+#nurse_button {
+  color: #599bb3;
+  border-color: #599bb3;
 }
-#button2 {
-  background-color:#117A65;
+#pain_button{
+  color:#117A65;
+  border-color: #117A65;
 }
-#button3 {
-  background-color: #AF7AC5;
+#need_button {
+  color: #AF7AC5;
+  border-color:  #AF7AC5;
 }
-#button4 {
-  background-color: #7D3C98;
+#feel_button {
+  color: #7D3C98;
+  border-color: #7D3C98;
 }
-#button5 {
-  background-color: #F4D03F;
+#social_button {
+  color:#F4D03F;
+  border-color: #F4D03F;
 }
-#button6 {
-  background-color: #F39C12;
-}
-#button7 {
-  background-color: #E74C3C;
+#room_button {
+  color: #F39C12;
+  border-color: #F39C12;
 }
 
 #words {
@@ -150,55 +162,63 @@ h1 {
   padding: 0;
 }
 
-#thanks_button {
+.phrase {
   font-family: 'Roboto', sans-serif;
   display: block;
   text-align: center;
   margin: 0 auto;
-  margin-top: 10%;
+  margin-top: 3%;
   position: relative;
   outline: none;
   border: none;
   padding: 5px;
-  padding-left: 30px;
-  padding-right: 30px;
-  font-size: 30px;
+  font-size: 25px;
   background-color: #34495E;
   color: white;
+  padding-right: 3vw;
+  padding-left: 3vw;
+}
+
+#maybe {
+  padding-right: 5vw;
+  padding-left: 5vw;
+}
+
+#dont {
+  padding-right: 2vw;
+  padding-left: 2vw;
 }
 
 .greetings {
   font-family: 'Roboto', sans-serif;
   margin: 0 auto;
   text-align: center;
-  margin-top: 5%;
+  margin-top: 4vh;
 }
 .small_button {
   margin: 0 auto;
   background-color: #34495E;
   color: white;
   border: none;
-  font-size: 28px;
+  font-size: 25px;
+  padding-left: 2.5vw;
+  padding-right: 2.5vw;
 }
 
 #page_content {
-  position: fixed;
+  background-color: #EAEDED;
+  position: absolute;
   width: 85vw;
-  top: 10vw;
-  left:25vh;
+  height: 90vh;
+  top: 10vh;
+  left: 25vw;
+}
+
+.message {
   text-align: center;
-}
-
-#nurse_icon {
   margin: 0 auto;
-  margin-top: 10%;
 }
-
-#welcome {
-
-  font-family: 'Courgette', cursive;
-  margin: 5%;
-  font-size: 4rem;
-  font-weight: bold;
-  color: #16A085;
+#nurse_icon {
+  margin-top: 20vh;
+  margin-right: 12vw;
 }
