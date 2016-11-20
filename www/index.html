@@ -48,33 +48,31 @@
 
 <body>
     <div id = "header">
-      <h1 aria-hidden="true"> NYUICUPICU </h1>
+      <h1 aria-hidden="true"> TECHnicallySpeaking </h1>
     </div>
     <div id = "side_buttons">
-      <button type = "button" class = "button" id = "button1" onclick='speak("call nurse")'>Call Nurse</button>
-      <button type = "button" class = "button" id = "button2" onclick="location.href = 'pages/pain.html'">Pain</button>
-      <button type = "button" class = "button" id = "button3">Medical Needs</button>
-      <button type = "button" class = "button" id = "button4">Feelings</button>
-      <button type = "button" class = "button" id = "button5">Room Control</button>
-      <button type = "button" class = "button" id = "button6">My Things</button>
-      <button type = "button" class = "button" id = "button7">Move Me</button>
+      <div id = "main_background">
+          <button type = "button" class = "button" id = "nurse_button" onclick='speak("call nurse")'>Call Nurse</button>
+          <button type = "button" class = "button" id = "pain_button" onclick="location.href = 'pages/pain.html'">Pain</button>
+          <button type = "button" class = "button" id = "need_button"> I Need </button>
+          <button type = "button" class = "button" id = "feel_button"> I Feel</button>
+          <button type = "button" class = "button" id = "social_button">Social</button>
+          <button type = "button" class = "button" id = "room_button">Room Control</button>
+      </div>
       <div id = "words">
-        <button type="button" id = "thanks_button" onclick='speak("thank you")'> Thank you </button>
         <div class = "greetings">
-          <button type="button" class = "small_button" onclick='speak("no")'> No </button>
           <button type="button" class = "small_button" onclick='speak("yes")'> Yes </button>
+          <button type="button" class = "small_button" onclick='speak("no")'> No </button>
         </div>
-        <div class = "greetings">
-          <button type="button" class = "small_button" onclick='speak("hi")'> Hi </button>
-          <button type="button" class = "small_button" onclick='speak("bye")'> Bye </button>
-        </div>
+        <button type="button" id= "dont" class = "phrase" onclick='speak("I don&quot;t know")'>I don't know</button>
+        <button type="button" id="maybe" class = "phrase" onclick='speak("maybe")'> Maybe </button>
+        <button type="button" class = "phrase" onclick='speak("thank you")'> Thank you </button>
       </div>
     </div>
 
     <div id = "page_content">
       <div class="message">
         <img id = "nurse_icon" src="img/nurse.png" alt="nurse" aria-hidden="true">
-        <h1 id = "welcome" aria-hidden="true"> Welcome </h1>
       </div>
     </div>
 
