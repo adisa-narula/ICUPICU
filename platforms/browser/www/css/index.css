@@ -222,7 +222,7 @@ h1 {
 }
 
 #nurse_icon {
-  margin-top: 20vh;
+  margin-top: 12vh;
   margin-right: 12vw;
 }
 
@@ -264,4 +264,22 @@ h1 {
   border-color: #4A4A4A;
   border-style: solid;
   border-radius: 4px;
+}
+
+#call_nurse {
+  display: none;
+  margin: 0 auto;
+  text-align: center;
+  margin-left: 8vw;
+  background-color: #34495E;
+  width: 60vw;
+  height: 50vh;
+  margin-top: 10vh;
+  border-radius: 5px;
+  color: white;
+}
+
+#call_nurse_icon {
+  margin-top: 8vh;
+  margin-bottom: 4vh;
 }

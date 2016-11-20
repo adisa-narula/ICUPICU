@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
 
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
@@ -15,32 +14,48 @@
 </head>
 
 <body>
-    <div id = "header">
-      <h1 aria-hidden="true"> NYUICUPICU </h1>
+  <div id = "header">
+    <h1 aria-hidden="true"> TECHnically Speaking </h1>
+  </div>
+  <div id = "side_buttons">
+    <div id = "main_background">
+        <button type = "button" class = "button" id = "nurse_button" onclick='callNurse()'>Call Nurse</button>
+        <button type = "button" class = "button" id = "pain_button" onclick="location.href = 'pain.html'">Pain</button>
+        <button type = "button" class = "button" id = "need_button"> I Need </button>
+        <button type = "button" class = "button" id = "feel_button"> I Feel</button>
+        <button type = "button" class = "button" id = "social_button">Social</button>
+        <button type = "button" class = "button" id = "room_button">Room Control</button>
     </div>
-    <div id = "side_buttons">
-      <button type = "button" class = "button" id = "button1" onclick='speak("call nurse")'>Call Nurse</button>
-      <button type = "button" class = "button" id = "button2" onclick="location.href = 'pain.html'">Pain</button>
-      <button type = "button" class = "button" id = "button3">Medical Needs</button>
-      <button type = "button" class = "button" id = "button4">Feelings</button>
-      <button type = "button" class = "button" id = "button5">Room Control</button>
-      <button type = "button" class = "button" id = "button6">My Things</button>
-      <button type = "button" class = "button" id = "button7">Move Me</button>
-      <div id = "words">
-        <button type="button" id = "thanks_button" onclick='speak("thank you")'> Thank you </button>
-        <div class = "greetings">
-          <button type="button" class = "small_button" onclick='speak("no")'> No </button>
-          <button type="button" class = "small_button" onclick='speak("yes")'> Yes </button>
-        </div>
-        <div class = "greetings">
-          <button type="button" class = "small_button" onclick='speak("hi")'> Hi </button>
-          <button type="button" class = "small_button" onclick='speak("bye")'> Bye </button>
-        </div>
+    <div id = "words">
+      <div class = "greetings">
+        <button type="button" class = "small_button" onclick='speak("yes")'> Yes </button>
+        <button type="button" class = "small_button" onclick='speak("no")'> No </button>
+      </div>
+      <button type="button" id= "dont" class = "phrase" onclick='speak("I don&quot;t know")'>I don't know</button>
+      <button type="button" id="maybe" class = "phrase" onclick='speak("maybe")'> Maybe </button>
+      <button type="button" class = "phrase" onclick='speak("thank you")'> Thank you </button>
+    </div>
+  </div>
+
+  <div id = "main_page">
+    <div id = "speech">
+      <form class="speech-form">
+          <input type="text" id = "speech_text" placeholder = "Type your speech" value="">
+          <input type="submit" id="speech_submit" value="Speak">
+      </form>
+    </div>
+    <!-- Changes according to the page -->
+    <div class="page_content">
+      <div id="content">
+        
+      </div>
+      <!-- Needed on everypage -->
+      <div id="call_nurse">
+        <img id="call_nurse_icon" src="../img/callnurse.png" alt="call nurse" aria-hidden="true">
+        <h1> Calling Nurse... </h1>
       </div>
     </div>
-    <div id = "page_content">
-      <img id = "human_icon" src="../img/human2.png" alt="human" aria-hidden="true">
-    </div>
+  </div>
 
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
     <script type="text/javascript" src="../js/script.js"></script>
