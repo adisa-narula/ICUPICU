@@ -85,9 +85,9 @@ h1 {
 
 #header {
   position: fixed;
-  width: 100%;
+  width: 100vw;
   height: 10vh;
-  background-color:#2C3E50;
+  background-color:#4A4A4A;
   z-index: 1;
 }
 
@@ -107,7 +107,7 @@ h1 {
 
 #main_background {
   height: 59vh;
-  background-color:#ABB2B9;
+  background-color:#898989;
   padding-top: 1vh;
 }
 
@@ -154,7 +154,7 @@ h1 {
 
 #words {
   position: absolute;
-  background-color: #E5E7E9;
+  background-color: #D8D8D8;
   width: 25vw;
   height: 30vh;
   display: block;
@@ -172,11 +172,12 @@ h1 {
   outline: none;
   border: none;
   padding: 5px;
-  font-size: 25px;
+  font-size: 1.6rem;
   background-color: #34495E;
   color: white;
   padding-right: 3vw;
   padding-left: 3vw;
+  border-radius: 4px;
 }
 
 #maybe {
@@ -200,12 +201,13 @@ h1 {
   background-color: #34495E;
   color: white;
   border: none;
-  font-size: 25px;
+  font-size: 1.6rem;
   padding-left: 2.5vw;
   padding-right: 2.5vw;
+  border-radius: 4px;
 }
 
-#page_content {
+#main_page {
   background-color: #EAEDED;
   position: absolute;
   width: 85vw;
@@ -214,11 +216,52 @@ h1 {
   left: 25vw;
 }
 
-.message {
+.page_content {
   text-align: center;
   margin: 0 auto;
 }
+
 #nurse_icon {
   margin-top: 20vh;
   margin-right: 12vw;
+}
+
+#welcome {
+  font-family: 'PT Sans Narrow', sans-serif;
+  font-size: 2rem;
+  margin-right: 12vw;
+  color:#2C3E50;
+}
+
+#speech {
+  margin: 0 auto;
+  text-align: center;
+  margin-right: 12vw;
+  margin-top: 4vh;
+}
+
+#speech_text {
+  font-family: 'Roboto', sans-serif;
+  width: 40vw;
+  height:5vh;
+  font-size: 1.5rem;
+  border-color:#898989;
+  border-width: medium;
+  border-style: solid;
+  border-radius: 4px;
+  text-shadow: none;
+}
+
+#speech_submit {
+  font-family: 'Roboto', sans-serif;
+  height:5vh;
+  padding-left: 2vw;
+  padding-right: 2vw;
+  margin-left: 1vw;
+  color:white;
+  background-color:#4A4A4A;
+  font-size: 1.5rem;
+  border-color: #4A4A4A;
+  border-style: solid;
+  border-radius: 4px;
 }
