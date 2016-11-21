@@ -285,6 +285,30 @@ h1 {
   margin-bottom: 4vh;
 }
 
+.three_buttons {
+  margin-right: 12vw;
+  margin-top: 5vh;
+}
+
+.square_button {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.2rem;
+  display: inline-block;
+  width: 20vw;
+  height: 20vh;
+  background-color: #34495E;
+  color: white;
+}
+
+.square_button img {
+  margin-top: 2vh;
+  display: inline;
+}
+
+.square_button h2 {
+  margin-top: 0;
+}
+
 /* Loading circle */
 .circle {
   width: 10px;
