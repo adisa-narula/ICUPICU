@@ -31,7 +31,7 @@
         <button type="button" class = "small_button" onclick='speak("yes")'> Yes </button>
         <button type="button" class = "small_button" onclick='speak("no")'> No </button>
       </div>
-      <button type="button" id= "dont" class = "phrase" onclick='speak("I don&quot;t know")'>I don't know</button>
+      <button type="button" id= "dont" class = "phrase" onclick='speak("I do not know")'>I don't know</button>
       <button type="button" id="maybe" class = "phrase" onclick='speak("maybe")'> Maybe </button>
       <button type="button" class = "phrase" onclick='speak("thank you")'> Thank you </button>
     </div>
@@ -48,19 +48,67 @@
     <div class="page_content">
       <div id="content">
         <div class="three_buttons">
-          <div class="square_button">
-            <!-- <img src="../img/nursebutton.png" alt="nurse button">
-            <h2> Chest </h2> -->
+          <div class="square_button" aria-hidden="true" onclick="pain('Chest')">
+            <img src="../img/chest.png" aria-hidden="true" alt="nurse button">
+            <h3 aria-hidden="true"> Chest </h3>
           </div>
-          <div class="square_button">
-            <!-- Back -->
+          <div class="square_button" aria-hidden="true" onclick="pain('Back')">
+            <img src="../img/back.png" aria-hidden="true"alt="nurse button">
+            <h3 aria-hidden="true"> Back </h3>
           </div>
-          <div class="square_button">
-            <!-- Head -->
+          <div class="square_button" aria-hidden="true" onclick="pain('Head')">
+            <img src="../img/head.png" aria-hidden="true" alt="nurse button">
+            <h3 aria-hidden="true"> Head </h3>
           </div>
         </div>
-
+        <div class="three_buttons" >
+          <div class="square_button" aria-hidden="true" onclick="pain('Neck')">
+            <img src="../img/neck.png" aria-hidden="true" alt="nurse button">
+            <h3 aria-hidden="true"> Neck </h3>
+          </div>
+          <div class="square_button" aria-hidden="true" onclick="pain('Stomach')">
+            <img src="../img/stomach.png" aria-hidden="true" alt="nurse button">
+            <h3 aria-hidden="true"> Stomach </h3>
+          </div>
+          <div class="square_button" aria-hidden="true" onclick="pain('Arm')">
+            <img  aria-hidden="true" src="../img/arm.png" alt="nurse button">
+            <h3 aria-hidden="true"> Arm </h3>
+          </div>
+        </div>
+        <div class="three_buttons" >
+          <div class="square_button" aria-hidden="true" onclick="pain('Leg')">
+            <img aria-hidden="true" src="../img/leg.png" alt="nurse button">
+            <h3 aria-hidden="true"> Leg </h3>
+          </div>
+          <div class="square_button" aria-hidden="true" onclick="pain('Shoulder')">
+            <img aria-hidden="true" src="../img/shoulder.png" alt="nurse button">
+            <h3 aria-hidden="true"> Shoulder </h3>
+          </div>
+          <div class="square_button" aria-hidden="true" onclick="pain('Hip')">
+            <img aria-hidden="true" src="../img/hip.png" alt="nurse button">
+            <h3 aria-hidden="true"> Hip </h3>
+          </div>
+        </div>
       </div>
+
+      <div id="pain_scale">
+        <br><br><div id="pain_title"aria-hidden="true"><h1>Select Pain Scale</h1></div>
+        <div class="pain_circles">
+          <div class="pain_circle" style="background-color:#154360;" onclick="painScale(1)"> <p>1</p> </div>
+          <div class="pain_circle" style="background-color:#1F618D;" onclick="painScale(2)"> <p>2</p> </div>
+          <div class="pain_circle" style="background-color:#3498DB;" onclick="painScale(3)"> <p>3</p> </div>
+          <div class="pain_circle" style="background-color:#48C9B0;" onclick="painScale(4)"> <p>4</p> </div>
+          <div class="pain_circle" style="background-color:#82E0AA;" onclick="painScale(5)"> <p>5</p> </div>
+        </div>
+        <div class="pain_circles">
+          <div class="pain_circle" style="background-color:#F1C40F;" onclick="painScale(6)"> <p>6</p> </div>
+          <div class="pain_circle" style="background-color:#F39C12;" onclick="painScale(7)"> <p>7</p> </div>
+          <div class="pain_circle" style="background-color:#EC7063;" onclick="painScale(8)"> <p>8</p> </div>
+          <div class="pain_circle" style="background-color:#E74C3C;" onclick="painScale(9)"> <p>9</p> </div>
+          <div class="pain_circle" style="background-color:#B03A2E;" onclick="painScale(10)"> <p>10</p> </div>
+        </div>
+      </div>
+
       <!-- Needed on everypage -->
       <div id="call_nurse">
         <img id="call_nurse_icon" src="../img/callnurse.png" alt="call nurse" aria-hidden="true">
