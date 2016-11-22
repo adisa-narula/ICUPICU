@@ -98,6 +98,24 @@ function feeling(emotion) {
   });
 }
 
+function control(object) {
+  var picture = object.replace(" ", "_")+".png";
+  $("#content").fadeOut("fast", function() {
+    var action = "<h1> "+ object + " </h1>";
+    var img = "<br><br><br><img style='width:150px;height:150px' src='../img/" + picture + "'>";
+    $("#control_photo").empty();
+    $("#control_photo").append(img);
+    $("#control_headers").empty();
+    $("#control_headers").append(action);
+    $("#control_panel").show("slow", function() {
+      console.log("SHOWING");
+      $(this).delay(4000).fadeOut("slow", function() {
+        $("#content").fadeIn();
+      });
+    });
+  });
+}
+
 function speak(message) {
   var msg = new SpeechSynthesisUtterance(message);
   msg.rate = 0.8;

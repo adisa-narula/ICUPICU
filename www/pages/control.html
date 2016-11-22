@@ -9,13 +9,13 @@
     <meta name="msapplication-tap-highlight" content="no" />
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
     <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
-    <link rel="stylesheet" type="text/css" href="css/need.css"/>
-    <title>I Need</title>
+    <link rel="stylesheet" type="text/css" href="css/control.css"/>
+    <title>Room Control</title>
 </head>
 
 <body>
   <div id = "header">
-    <h1 aria-hidden="true"> I Need </h1>
+    <h1 aria-hidden="true"> Room Control </h1>
   </div>
   <div id = "side_buttons">
     <div id = "main_background">
@@ -48,38 +48,24 @@
     <div class="page_content">
       <div id="content">
         <div class="three_buttons">
-          <div class="square_button" onclick="need('the bathroom')">
-            <img src="../img/nurseneed.png" aria-hidden="true" alt="nurse button">
-            <h3 aria-hidden="true"> Bathroom </h3>
+          <div class="square_button" onclick="control('Light On')">
+            <img src="../img/light_on.png" aria-hidden="true" alt="nurse button">
+            <h3 aria-hidden="true"> Light On </h3>
           </div>
-          <div class="square_button" onclick="need('tracheal suctioning')">
-            <img src="../img/nurseneed.png" aria-hidden="true"alt="nurse button">
-            <h3 aria-hidden="true"> Tracheal Suctioning </h3>
+          <div class="square_button" onclick="control('Light Off')">
+            <img src="../img/light_off.png" aria-hidden="true"alt="nurse button">
+            <h3 aria-hidden="true"> Light Off </h3>
           </div>
-          <div class="square_button" onclick="need('oral suctioning')">
-            <img src="../img/nurseneed.png" aria-hidden="true" alt="nurse button">
-            <h3 aria-hidden="true"> Oral Suctioning </h3>
-          </div>
-        </div>
-        <div class="three_buttons" >
-          <div class="square_button" onclick="need('mouth swab')">
-            <img src="../img/nurseneed.png" aria-hidden="true" alt="nurse button">
-            <h3 aria-hidden="true"> Mouth Swab </h3>
-          </div>
-          <div class="square_button" onclick="need('repositioning')">
-            <img src="../img/nurseneed.png" aria-hidden="true" alt="nurse button">
-            <h3 aria-hidden="true"> Repositioning </h3>
-          </div>
-          <div class="square_button" onclick="need('my family')">
-            <img  src="../img/nurseneed.png" aria-hidden="true" alt="nurse button">
-            <h3 aria-hidden="true"> My Family </h3>
+          <div class="square_button" onclick="control('Bed Control')">
+            <img src="../img/bed_control.png" aria-hidden="true" alt="nurse button">
+            <h3 aria-hidden="true"> Bed Control </h3>
           </div>
         </div>
       </div>
-      <div id="need_panel">
-        <div id="need_photo">
+      <div id="control_panel">
+        <div id="control_photo">
         </div>
-        <div id="need_headers">
+        <div id="control_headers">
         </div>
       </div>
 
