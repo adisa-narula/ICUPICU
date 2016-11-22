@@ -48,43 +48,43 @@
     <div class="page_content">
       <div id="content">
         <div class="three_buttons">
-          <div class="square_button" aria-hidden="true" onclick="pain('Chest')">
+          <div class="square_button" onclick="pain('Chest')">
             <img src="../img/chest.png" aria-hidden="true" alt="nurse button">
             <h3 aria-hidden="true"> Chest </h3>
           </div>
-          <div class="square_button" aria-hidden="true" onclick="pain('Back')">
+          <div class="square_button" onclick="pain('Back')">
             <img src="../img/back.png" aria-hidden="true"alt="nurse button">
             <h3 aria-hidden="true"> Back </h3>
           </div>
-          <div class="square_button" aria-hidden="true" onclick="pain('Head')">
+          <div class="square_button" onclick="pain('Head')">
             <img src="../img/head.png" aria-hidden="true" alt="nurse button">
             <h3 aria-hidden="true"> Head </h3>
           </div>
         </div>
         <div class="three_buttons" >
-          <div class="square_button" aria-hidden="true" onclick="pain('Neck')">
+          <div class="square_button" onclick="pain('Neck')">
             <img src="../img/neck.png" aria-hidden="true" alt="nurse button">
             <h3 aria-hidden="true"> Neck </h3>
           </div>
-          <div class="square_button" aria-hidden="true" onclick="pain('Stomach')">
+          <div class="square_button" onclick="pain('Stomach')">
             <img src="../img/stomach.png" aria-hidden="true" alt="nurse button">
             <h3 aria-hidden="true"> Stomach </h3>
           </div>
-          <div class="square_button" aria-hidden="true" onclick="pain('Arm')">
+          <div class="square_button" onclick="pain('Arm')">
             <img  aria-hidden="true" src="../img/arm.png" alt="nurse button">
             <h3 aria-hidden="true"> Arm </h3>
           </div>
         </div>
         <div class="three_buttons" >
-          <div class="square_button" aria-hidden="true" onclick="pain('Leg')">
+          <div class="square_button" onclick="pain('Leg')">
             <img aria-hidden="true" src="../img/leg.png" alt="nurse button">
             <h3 aria-hidden="true"> Leg </h3>
           </div>
-          <div class="square_button" aria-hidden="true" onclick="pain('Shoulder')">
+          <div class="square_button" onclick="pain('Shoulder')">
             <img aria-hidden="true" src="../img/shoulder.png" alt="nurse button">
             <h3 aria-hidden="true"> Shoulder </h3>
           </div>
-          <div class="square_button" aria-hidden="true" onclick="pain('Hip')">
+          <div class="square_button" onclick="pain('Hip')">
             <img aria-hidden="true" src="../img/hip.png" alt="nurse button">
             <h3 aria-hidden="true"> Hip </h3>
           </div>
@@ -107,6 +107,24 @@
           <div class="pain_circle" style="background-color:#E74C3C;" onclick="painScale(9)"> <p>9</p> </div>
           <div class="pain_circle" style="background-color:#B03A2E;" onclick="painScale(10)"> <p>10</p> </div>
         </div>
+        <div class ="cancel_button" onclick="cancelPain('pain')">
+          Cancel
+        </div>
+      </div>
+
+      <div id="pain_panel">
+        <div id="pain_headers">
+        </div>
+        <div class="pain_result" id="pain1" style="background-color:#154360;"> <p>1</p> </div>
+        <div class="pain_result" id="pain2" style="background-color:#1F618D;"> <p>2</p> </div>
+        <div class="pain_result" id="pain3" style="background-color:#3498DB;"> <p>3</p> </div>
+        <div class="pain_result" id="pain4" style="background-color:#48C9B0;"> <p>4</p> </div>
+        <div class="pain_result" id="pain5" style="background-color:#82E0AA;"> <p>5</p> </div>
+        <div class="pain_result" id="pain6" style="background-color:#F1C40F;"> <p>6</p> </div>
+        <div class="pain_result" id="pain7" style="background-color:#F39C12;"> <p>7</p> </div>
+        <div class="pain_result" id="pain8" style="background-color:#EC7063;"> <p>8</p> </div>
+        <div class="pain_result" id="pain9" style="background-color:#E74C3C;"> <p>9</p> </div>
+        <div class="pain_result" id="pain10" style="background-color:#B03A2E;"> <p>10</p> </div>
       </div>
 
       <!-- Needed on everypage -->
