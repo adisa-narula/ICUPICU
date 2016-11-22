@@ -224,20 +224,17 @@ h1 {
 
 #nurse_icon {
   margin-top: 20vh;
-  margin-right: 12vw;
 }
 
 #welcome {
   font-family: 'PT Sans Narrow', sans-serif;
   font-size: 2rem;
-  margin-right: 12vw;
   color:#2C3E50;
 }
 
 #speech {
   margin: 0 auto;
   text-align: center;
-  margin-right: 12vw;
   margin-top: 4vh;
 }
 
@@ -374,7 +371,6 @@ h1 {
 }
 
 .three_buttons {
-  margin-right: 12vw;
   margin-top: 4vh;
 }
 

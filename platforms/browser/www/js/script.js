@@ -61,6 +61,10 @@ function painScale(number) {
   });
 }
 
+function need(action) {
+  console.log("I need " + action);
+}
+
 function speak(message) {
   var msg = new SpeechSynthesisUtterance(message);
   msg.rate = 0.8;
