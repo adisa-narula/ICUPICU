@@ -12,11 +12,7 @@ $('.speech-form').on('submit', function () {
 });
 
 function callNurse() {
-
-  console.log("calling nurse");
-
   speak("Calling nurse");
-  // location.href = '../index.html'
   $("#content").fadeOut( "fast");
   $("#pain_scale").fadeOut("fast");
   $("#pain_panel").fadeOut("fast");
@@ -30,7 +26,6 @@ function callNurse() {
 }
 
 function cancelPain(cancel) {
-  console.log("Canceling " + cancel);
   $("#pain_scale").fadeOut("fast", function() {
     $("#pain_panel").fadeOut("fast", function() {
       $("#content").fadeIn();
@@ -39,7 +34,6 @@ function cancelPain(cancel) {
 }
 
 function pain(part) {
-  console.log("pain: " + part);
   body_part = part;
   $( "#content" ).fadeOut("fast", function() {
     $("#pain_panel").fadeOut("fast", function() {
@@ -49,7 +43,6 @@ function pain(part) {
 }
 
 function painScale(number) {
-  console.log("pain scale");
   var scaleID = "#pain"+number;
   $("#pain_scale").fadeOut("fast", function() {
     var pain = "<br><br><h1> "+ body_part + " Pain </h1>";
