@@ -79,10 +79,30 @@ function need(action) {
   });
 }
 
+function feeling(emotion) {
+  var message = "I feel " + emotion;
+  var picture = emotion + ".png";
+  $("#content").fadeOut("fast", function() {
+    var feeling = "<h1> "+ message + " </h1>";
+    var img = "<br><br><br><img style='width:150px;height:150px' src='../img/" + picture + "'>";
+    console.log(img);
+    $("#feeling_photo").empty();
+    $("#feeling_photo").append(img);
+    $("#feeling_headers").empty();
+    $("#feeling_headers").append(feeling);
+    $("#feeling_panel").show("slow", function(){
+      speak(message);
+      $(this).delay(4000).fadeOut("slow", function() {
+        $("#content").fadeIn();
+      });
+    });
+  });
+}
+
 function speak(message) {
   var msg = new SpeechSynthesisUtterance(message);
   msg.rate = 0.8;
-  window.speechSynthesis.speak(msg);
+  // window.speechSynthesis.speak(msg);
   var voices = window.speechSynthesis.getVoices();
   // console.log(voices);
 }
