@@ -85,7 +85,6 @@ function feeling(emotion) {
   $("#content").fadeOut("fast", function() {
     var feeling = "<h1> "+ message + " </h1>";
     var img = "<br><br><br><img style='width:150px;height:150px' src='../img/" + picture + "'>";
-    console.log(img);
     $("#feeling_photo").empty();
     $("#feeling_photo").append(img);
     $("#feeling_headers").empty();
