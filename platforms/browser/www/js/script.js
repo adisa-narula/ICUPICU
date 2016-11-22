@@ -62,7 +62,21 @@ function painScale(number) {
 }
 
 function need(action) {
-  console.log("I need " + action);
+  var message = "I need " + action;
+  $( "#content" ).fadeOut("fast", function() {
+    var need = "<h1> "+ message + " </h1>";
+    var img = "<br><br><br><img src='../img/callnurse.png'>"
+    $("#need_photo").empty();
+    $("#need_photo").append(img);
+    $("#need_headers").empty();
+    $("#need_headers").append(need);
+    $("#need_panel").show("slow", function() {
+        speak(message);
+        $(this).delay(4000).fadeOut("slow", function() {
+          $("#content").fadeIn();
+        });
+    });
+  });
 }
 
 function speak(message) {
