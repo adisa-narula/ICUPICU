@@ -1,0 +1,112 @@
+<!--
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Camera</title>
+  </head>
+  <body>
+    <div id="note">Hello World</div>
+    <img id="myImage" src="" width="150px" height="150px">
+    <button type="button" name="button" id="take photo">Take Photo</button>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
+    <script type="text/javascript" src="../js/script.js"></script>
+    <script type="text/javascript" src="../cordova.js"></script>
+    <script type="text/javascript" src="../js/index.js"></script>
+    <script type="text/javascript">
+        app.initialize();
+    </script>
+    <script type="text/javascript" src="../js/camera.js"></script>
+  </body>
+</html> -->
+<!DOCTYPE html>
+<html>
+<head>
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
+    <link rel="stylesheet" type="text/css" href="css/camera.css"/>
+    <title>I Need</title>
+</head>
+
+<body>
+  <div id = "header">
+    <h1 aria-hidden="true"> I Need </h1>
+  </div>
+  <div id = "side_buttons">
+    <div id = "main_background">
+        <button type = "button" class = "button" id = "nurse_button" onclick='callNurse()'>Call Nurse</button>
+        <button type = "button" class = "button" id = "pain_button" onclick="location.href = 'pain.html'">Pain</button>
+        <button type = "button" class = "button" id = "need_button" onclick="location.href = 'need.html'"> I Need </button>
+        <button type = "button" class = "button" id = "feel_button" onclick="location.href = 'feeling.html'"> I Feel</button>
+        <button type = "button" class = "button" id = "social_button" onclick="location.href = 'social.html'">Social</button>
+        <button type = "button" class = "button" id = "room_button" onclick="location.href = 'control.html'">Room Control</button>
+    </div>
+    <div id = "words">
+      <div class = "greetings">
+        <button type="button" class = "small_button" onclick='speak("yes")'> Yes </button>
+        <button type="button" class = "small_button" onclick='speak("no")'> No </button>
+      </div>
+      <button type="button" id= "dont" class = "phrase" onclick='speak("I do not know")'>I don't know</button>
+      <button type="button" id="maybe" class = "phrase" onclick='speak("maybe")'> Maybe </button>
+      <button type="button" class = "phrase" onclick='speak("thank you")'> Thank you </button>
+    </div>
+  </div>
+
+  <div id = "main_page">
+    <div id = "speech">
+      <form class="speech-form">
+          <input type="text" id = "speech_text" placeholder = "Type your speech" value="">
+          <input type="submit" id="speech_submit" value="Speak">
+      </form>
+    </div>
+    <!-- Changes according to the page -->
+    <div class="page_content">
+      <div id="content">
+        <div id="take_photo"><h3>Take Photo</h3></div>
+        <!--<div id="note"></div> for debugging-->
+        <div class="overTop" id="clickable">
+          <!--creates canvas and header rows, and then populates with canvas in javascript-->
+        <div class="rowOne" id="row1"></div>
+        <div class="rowTwo" id="row2"></div>
+        <div class="rowThree" id="row3"></div>
+        <div class="rowFour" id="row4"></div>
+        <div class="rowFive" id="row5"></div>
+        <!--<div id="patientRoom"></div>-->
+        <img id="patientRoom">
+        </div>
+      </div>
+      <div id="need_panel">
+        <div id="need_photo">
+        </div>
+        <div id="need_headers">
+        </div>
+      </div>
+
+      <!-- Needed on everypage -->
+      <div id="call_nurse">
+        <img id="call_nurse_icon" src="../img/callnurse.png" alt="call nurse" aria-hidden="true">
+        <h1> Calling Nurse</h1><br>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+      </div>
+    </div>
+  </div>
+
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
+    <script type="text/javascript" src="../js/script.js"></script>
+    <script type="text/javascript" src="../cordova.js"></script>
+    <script type="text/javascript" src="../js/index.js"></script>
+    <script type="text/javascript">
+        app.initialize();
+    </script>
+    <script type="text/javascript" src="../js/camera.js"></script>
+</body>
+
+</html>

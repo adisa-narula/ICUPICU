@@ -48,19 +48,47 @@
     <div class="page_content">
       <div id="content">
         <div class="three_buttons">
-          <div class="square_button" onclick="control('Light On')">
+          <div class="square_button" id="light"> <!--onclick="control('Light On')"-->
             <img src="../img/light_on.png" aria-hidden="true" alt="nurse button">
-            <h3 aria-hidden="true"> Light On </h3>
+            <h3> Lights </h3>
           </div>
-          <div class="square_button" onclick="control('Light Off')">
-            <img src="../img/light_off.png" aria-hidden="true"alt="nurse button">
-            <h3 aria-hidden="true"> Light Off </h3>
+          <div class="square_button" id="blinds"> <!--onclick="control('Light Off')"-->
+            <img src="../img/blinds_up.png" aria-hidden="true"alt="nurse button"> <!--Aaron K Kim from the Noun Project -->
+            <h3> Blinds </h3>
           </div>
-          <div class="square_button" onclick="control('Bed Control')">
+          <div class="square_button" id="bed"> <!--onclick="control('Bed Control')"-->
             <img src="../img/bed_control.png" aria-hidden="true" alt="nurse button">
-            <h3 aria-hidden="true"> Bed Control </h3>
+            <h3> Bed Control </h3>
           </div>
         </div>
+          <div class="three_buttons">
+          <div class="square_button" id="TV">
+            <img src="../img/TV_On.png" aria-hidden="true" alt="nurse button"> <!--Mehmet Gozetlik from the Noun Project -->
+            <h3> TV On/Off </h3>
+          </div>
+          <div class="square_button" id="TVforward">
+            <img src="../img/channel_up.png" aria-hidden="true" alt="nurse button">
+            <h3> TV Channel Up </h3>
+              </div>
+            <div class="square_button" id="TVback">
+              <img src="../img/channel_down.png" aria-hidden="true" alt="nurse button">
+              <h3> TV Channel Down </h3>
+            </div>
+          </div>
+            <div class="three_buttons">
+            <div class="square_button" id="TVvolUp"> <!--Ismael Ruiz from the Noun Project -->
+              <img src="../img/volume_up.png" aria-hidden="true" alt="nurse button">
+              <h3> TV Volume Up </h3>
+            </div>
+            <div class="square_button" id="TVvolDwn"> <!--Ismael Ruiz from the Noun Project -->
+              <img src="../img/volume_down.png" aria-hidden="true" alt="nurse button">
+              <h3> TV Volume Down </h3>
+            </div>
+            <div class="square_button" id="Connect"> <!--Ismael Ruiz from the Noun Project -->
+              <!--<img src="../img/volume_down.png" aria-hidden="true" alt="nurse button">-->
+              <h3> Connection Indicator: Green When Connected </h3>
+            </div>
+          </div>
       </div>
       <div id="control_panel">
         <div id="control_photo">
@@ -87,6 +115,7 @@
     <script type="text/javascript">
         app.initialize();
     </script>
+    <script type="text/javascript" src="../js/websocket.js"></script>
 
 </body>
 

@@ -351,6 +351,11 @@ h1 {
   margin-right: 0.5vw;
 }
 
+#Connect h3{
+  align-content: center;
+  margin: 3vh;
+}
+
 .square_button img {
   margin-top: 2vh;
   margin-bottom: 1vh;
