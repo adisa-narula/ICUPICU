@@ -298,14 +298,15 @@ h1 {
   width: 61vw;
   height: 5vh;
   margin-left: 4vw;
-  background-color: red;
+  background-color: #4A4A4A;
+  border-radius: 2px;
 }
 
 #take_photo h3 {
   margin-top: 1vh;
   width: 61vw;
   font-family: 'Roboto', sans-serif;
-  font-size: 5vh;
+  font-size: 2rem;
   color: white;
   text-align: center;
   margin-top: 1vh;

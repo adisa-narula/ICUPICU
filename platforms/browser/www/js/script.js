@@ -118,8 +118,8 @@ function control(object) {
 
 function speak(message) {
   var msg = new SpeechSynthesisUtterance(message);
-  msg.rate = 0.8;
-  // window.speechSynthesis.speak(msg);
+  msg.rate = 0.5;
+  window.speechSynthesis.speak(msg);
   var voices = window.speechSynthesis.getVoices();
   // console.log(voices);
 }
