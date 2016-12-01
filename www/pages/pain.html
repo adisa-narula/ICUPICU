@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-
     <meta charset="utf-8" />
     <meta name="format-detection" content="telephone=no" />
     <meta name="msapplication-tap-highlight" content="no" />
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
-    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" /> -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="css/pain.css"/>
     <title>Pain</title>
 </head>
 <body>
   <div id = "header">
-    <h1 aria-hidden="true"> Pain </h1>
+    <h1 aria-hidden="true" id="pain_header"> Pain </h1>
+    <a href="settings.html"> <i class="fa fa-cog" id="setting"></i> </a>
   </div>
   <div id = "side_buttons">
     <div id = "main_background">
@@ -27,12 +27,12 @@
     </div>
     <div id = "words">
       <div class = "greetings">
-        <button type="button" class = "small_button" onclick='speak("yes")'> Yes </button>
-        <button type="button" class = "small_button" onclick='speak("no")'> No </button>
+        <button type="button" id="yes" class = "small_button" onclick='speak("yes")'> Yes </button>
+        <button type="button" id="no" class = "small_button" onclick='speak("no")'> No </button>
       </div>
       <button type="button" id= "dont" class = "phrase" onclick='speak("I do not know")'>I don't know</button>
       <button type="button" id="maybe" class = "phrase" onclick='speak("maybe")'> Maybe </button>
-      <button type="button" class = "phrase" onclick='speak("thank you")'> Thank you </button>
+      <button type="button" id="thanks" class = "phrase" onclick='speak("thank you")'> Thank you </button>
     </div>
   </div>
 
@@ -47,45 +47,45 @@
     <div class="page_content">
       <div id="content">
         <div class="three_buttons">
-          <div class="square_button" onclick="pain('Chest')">
+          <div class="square_button" onclick="pain('Chest', this)">
             <img src="../img/chest.png" aria-hidden="true" alt="nurse button">
-            <h3> Chest </h3>
+            <h3 id="chest"> Chest </h3>
           </div>
-          <div class="square_button" onclick="pain('Back')">
+          <div class="square_button" onclick="pain('Back', this)">
             <img src="../img/back.png" aria-hidden="true"alt="nurse button">
-            <h3> Back </h3>
+            <h3 id="back"> Back </h3>
           </div>
-          <div class="square_button" onclick="pain('Head')">
+          <div class="square_button" onclick="pain('Head', this)">
             <img src="../img/head.png" aria-hidden="true" alt="nurse button">
-            <h3> Head </h3>
+            <h3 id="head"> Head </h3>
           </div>
         </div>
         <div class="three_buttons" >
-          <div class="square_button" onclick="pain('Neck')">
+          <div class="square_button" onclick="pain('Neck', this)">
             <img src="../img/neck.png" aria-hidden="true" alt="nurse button">
-            <h3> Neck </h3>
+            <h3 id="neck"> Neck </h3>
           </div>
-          <div class="square_button" onclick="pain('Stomach')">
+          <div class="square_button" onclick="pain('Stomach', this)">
             <img src="../img/stomach.png" aria-hidden="true" alt="nurse button">
-            <h3> Stomach </h3>
+            <h3 id="stomach"> Stomach </h3>
           </div>
-          <div class="square_button" onclick="pain('Arm')">
+          <div class="square_button" onclick="pain('Arm', this)">
             <img  aria-hidden="true" src="../img/arm.png" alt="nurse button">
-            <h3> Arm </h3>
+            <h3 id="arm"> Arm </h3>
           </div>
         </div>
         <div class="three_buttons" >
-          <div class="square_button" onclick="pain('Leg')">
+          <div class="square_button" onclick="pain('Leg', this)">
             <img aria-hidden="true" src="../img/leg.png" alt="nurse button">
-            <h3> Leg </h3>
+            <h3 id="leg"> Leg </h3>
           </div>
-          <div class="square_button" onclick="pain('Shoulder')">
+          <div class="square_button" onclick="pain('Shoulder', this)">
             <img aria-hidden="true" src="../img/shoulder.png" alt="nurse button">
-            <h3> Shoulder </h3>
+            <h3 id="shoulder"> Shoulder </h3>
           </div>
-          <div class="square_button" onclick="pain('Hip')">
+          <div class="square_button" onclick="pain('Hip', this)">
             <img aria-hidden="true" src="../img/hip.png" alt="nurse button">
-            <h3> Hip </h3>
+            <h3 id="hip"> Hip </h3>
           </div>
         </div>
       </div>

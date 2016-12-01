@@ -183,13 +183,18 @@ h1 {
 }
 
 #maybe {
-  padding-right: 5vw;
-  padding-left: 5vw;
+  width: 20vw;
+  height: 5vh;
 }
 
 #dont {
-  padding-right: 2vw;
-  padding-left: 2vw;
+  width: 20vw;
+  height: 5vh;
+}
+
+#thanks {
+  width:20vw;
+  height:5vh;
 }
 
 .greetings {
@@ -198,14 +203,17 @@ h1 {
   text-align: center;
   margin-top: 4vh;
 }
+
 .small_button {
   margin: 0 auto;
   background-color: #34495E;
   color: white;
   border: none;
   font-size: 1.6rem;
-  padding-left: 2.5vw;
-  padding-right: 2.5vw;
+  /*padding-left: 2.5vw;
+  padding-right: 2.5vw;*/
+  width: 9.6vw;
+  height: 5vh;
   border-radius: 4px;
 }
 
@@ -420,7 +428,7 @@ h1 {
   font-family: 'Roboto', sans-serif;
   width: 8vw;
   height: 5vh;
-  background-color: #85929E;
+  background-color: #52BE80;
   margin: 0 auto;
   margin-top: 5vh;
   color: white;

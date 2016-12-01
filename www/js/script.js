@@ -3,7 +3,24 @@ localStorage.setItem('key', "trnsl.1.1.20161201T024454Z.d49429b803c4216c.0539036
 
 $(document).ready(function() {
   langMenu();
+  langPain();
+  ajaxSpeech("Speak", "speech_submit", "value");
+  ajaxSpeech("Type your speech", "speech_submit", "value");
+
 });
+
+function langPain() {
+  ajaxCall("Pain", "pain_header");
+  ajaxCall("Chest", "chest");
+  ajaxCall("Back", "back");
+  ajaxCall("Head", "head");
+  ajaxCall("Neck", "neck");
+  ajaxCall("Stomach", "stomach");
+  ajaxCall("Arm", "arm");
+  ajaxCall("Leg", "leg");
+  ajaxCall("Shoulder", "shoulder");
+  ajaxCall("Hip", "hip");
+}
 
 function langMenu() {
   ajaxCall("Welcome", "welcome");
@@ -18,6 +35,34 @@ function langMenu() {
   ajaxCall("I don't know", "dont");
   ajaxCall("Maybe", "maybe");
   ajaxCall("Thank you", "thanks");
+}
+
+function ajaxSpeech(text, target, prop) {
+  var element = document.getElementById(target);
+  if(!element) {
+    return;
+  }
+
+  var lang = localStorage.getItem('language');
+  var key = localStorage.getItem('key');
+  var translate = "en-" + lang;
+  $.ajax({
+    url:"https://translate.yandex.net/api/v1.5/tr.json/translate?key="+ key + "&lang=" + translate + "&text=" + text,
+    dataType:"json",
+    success: function(data) {
+      var t = "#"+target;
+      $(t).empty();
+      $(t).prop(prop, data.text);
+      if (element.offsetHeight < element.scrollHeight ||
+          element.offsetWidth < element.scrollWidth) {
+            var width = $(t).height();
+            $(t).css("font-size", width*.50+ "px");
+      }
+    },
+    error: function(err) {
+      console.log("error", err);
+    }
+  });
 }
 
 function ajaxCall(text, target) {

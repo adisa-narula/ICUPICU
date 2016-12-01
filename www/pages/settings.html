@@ -29,25 +29,25 @@
 <body>
     <div id = "header">
       <h1 aria-hidden="true"> Settings </h1>
-      <a href="www.google.com"> <i class="fa fa-cog" id="setting"></i></a>
+      <a href="settings.html"> <i class="fa fa-cog" id="setting"></i> </a>
     </div>
     <div id = "side_buttons">
       <div id = "main_background">
           <button type = "button" class = "button" id = "nurse_button" onclick='callNurse()'>Call Nurse</button>
-          <button type = "button" class = "button" id = "pain_button" onclick="location.href = 'pages/pain.html'">Pain</button>
-          <button type = "button" class = "button" id = "need_button" onclick="location.href = 'pages/need.html'"> I Need </button>
-          <button type = "button" class = "button" id = "feel_button" onclick="location.href = 'pages/feeling.html'"> I Feel</button>
-          <button type = "button" class = "button" id = "social_button" onclick="location.href = 'pages/social.html'">Social</button>
-          <button type = "button" class = "button" id = "room_button" onclick="location.href = 'pages/control.html'">Room Control</button>
+          <button type = "button" class = "button" id = "pain_button" onclick="location.href = 'pain.html'">Pain</button>
+          <button type = "button" class = "button" id = "need_button" onclick="location.href = 'need.html'"> I Need </button>
+          <button type = "button" class = "button" id = "feel_button" onclick="location.href = 'feeling.html'"> I Feel</button>
+          <button type = "button" class = "button" id = "social_button" onclick="location.href = 'social.html'">Social</button>
+          <button type = "button" class = "button" id = "room_button" onclick="location.href = 'control.html'">Room Control</button>
       </div>
       <div id = "words">
         <div class = "greetings">
-          <button type="button" class = "small_button" onclick='speak("yes")'> Yes </button>
-          <button type="button" class = "small_button" onclick='speak("no")'> No </button>
+          <button type="button" id = "yes" class = "small_button" onclick='speak("yes")'> Yes </button>
+          <button type="button" id = "no" class = "small_button" onclick='speak("no")'> No </button>
         </div>
-        <button type="button" id= "dont" class = "phrase" onclick='speak("I don&quot;t know")'>I don't know</button>
+        <button type="button" id= "dont" class = "phrase" onclick='speak("I do not know")'>I don't know</button>
         <button type="button" id="maybe" class = "phrase" onclick='speak("maybe")'> Maybe </button>
-        <button type="button" class = "phrase" onclick='speak("thank you")'> Thank you </button>
+        <button type="button" id = "thanks" class = "phrase" onclick='speak("thank you")'> Thank you </button>
       </div>
     </div>
 

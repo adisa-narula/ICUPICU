@@ -182,13 +182,18 @@ h1 {
 }
 
 #maybe {
-  padding-right: 5vw;
-  padding-left: 5vw;
+  width: 20vw;
+  height: 5vh;
 }
 
 #dont {
-  padding-right: 2vw;
-  padding-left: 2vw;
+  width: 20vw;
+  height: 5vh;
+}
+
+#thanks {
+  width: 20vw;
+  height: 5vh;
 }
 
 .greetings {
@@ -395,6 +400,16 @@ h1 {
 
 .square_button h3 {
   margin-top: 0vh;
+}
+
+#setting {
+  color:white;
+  position: absolute;
+  top: 0;
+  right:0;
+  font-size: 2rem;
+  margin-right: 2%;
+  margin-top: 2%;
 }
 
 /* Loading circle */
