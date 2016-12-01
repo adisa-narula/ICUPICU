@@ -89,12 +89,14 @@ h1 {
   height: 10vh;
   background-color:#4A4A4A;
   z-index: 1;
+  text-align: center;
 }
 
 #header h1 {
   color: white;
   margin-top: 2%;
   font-size: 1.8rem;
+  display: inline-block;
 }
 
 #side_buttons {
@@ -118,7 +120,7 @@ h1 {
   display: block;
   width: 20vw;
   height: 8vh;
-  padding: 0;
+  padding: 3%;
   background-color:white;
   margin: 0 auto;
   border-style: solid;
@@ -181,13 +183,22 @@ h1 {
 }
 
 #maybe {
-  padding-right: 5vw;
-  padding-left: 5vw;
+  width: 20vw;
+  height: 5vh;
+  /*padding-right: 5vw;
+  padding-left: 5vw;*/
 }
 
 #dont {
-  padding-right: 2vw;
-  padding-left: 2vw;
+  width: 20vw;
+  height: 5vh;
+  /*padding-right: 2vw;
+  padding-left: 2vw;*/
+}
+
+#thanks {
+  width:20vw;
+  height:5vh;
 }
 
 .greetings {
@@ -202,8 +213,10 @@ h1 {
   color: white;
   border: none;
   font-size: 1.6rem;
-  padding-left: 2.5vw;
-  padding-right: 2.5vw;
+  width: 9.6vw;
+  height: 5vh;
+  /*padding-left: 3.2vw;
+  padding-right: 3.2vw;*/
   border-radius: 4px;
 }
 
@@ -374,4 +387,14 @@ h1 {
   border-color: #4A4A4A;
   border-style: solid;
   border-radius: 0px;
+}
+
+#setting {
+  color:white;
+  position: absolute;
+  top: 0;
+  right:0;
+  font-size: 2rem;
+  margin-right: 2%;
+  margin-top: 2%;
 }

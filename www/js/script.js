@@ -1,9 +1,51 @@
 var body_part;
+localStorage.setItem('key', "trnsl.1.1.20161201T024454Z.d49429b803c4216c.0539036a46d4482ed3c42c589e52375ed3a07b1a");
 
-$.getJSON("data/information.json", function(data)
-{
-    $("#welcome").append("Welcome " + data.first_name + " " + data.last_name);
+$(document).ready(function() {
+  langMenu();
 });
+
+function langMenu() {
+  ajaxCall("Welcome", "welcome");
+  ajaxCall("Call Nurse", "nurse_button");
+  ajaxCall("Pain", "pain_button");
+  ajaxCall("I Need", "need_button");
+  ajaxCall("I Feel", "feel_button");
+  ajaxCall("Social", "social_button");
+  ajaxCall("Room Control", "room_button");
+  ajaxCall("Yes", "yes");
+  ajaxCall("No", "no");
+  ajaxCall("I don't know", "dont");
+  ajaxCall("Maybe", "maybe");
+  ajaxCall("Thank you", "thanks");
+}
+
+function ajaxCall(text, target) {
+  var lang = localStorage.getItem('language');
+  var key = localStorage.getItem('key');
+  var translate = "en-" + lang;
+  $.ajax({
+    url:"https://translate.yandex.net/api/v1.5/tr.json/translate?key="+ key + "&lang=" + translate + "&text=" + text,
+    dataType:"json",
+    success: function(data) {
+      var t = "#"+target;
+      $(t).empty();
+      $(t).append(data.text);
+      var element = document.getElementById(target);
+      if(!element) {
+        return;
+      }
+      if (element.offsetHeight < element.scrollHeight ||
+          element.offsetWidth < element.scrollWidth) {
+            var width = $(t).height();
+            $(t).css("font-size", width*.50+ "px");
+      }
+    },
+    error: function(err) {
+      console.log("error", err);
+    }
+  });
+}
 
 $('.speech-form').on('submit', function () {
     var speech = $('#speech_text').val();
@@ -116,10 +158,20 @@ function control(object) {
   });
 }
 
+function setLanguage(lang, button) {
+  $(".square_button").css("box-shadow", "");
+  $(button).css('box-shadow', '5px 5px 5px #5499C7');
+  localStorage.setItem('language', lang);
+}
+
 function speak(message) {
   var msg = new SpeechSynthesisUtterance(message);
+  msg.lang = "en-US";
   msg.rate = 1;
   window.speechSynthesis.speak(msg);
+}
+
+function test() {
   var voices = window.speechSynthesis.getVoices();
-  // console.log(voices);
+  console.log(voices);
 }
