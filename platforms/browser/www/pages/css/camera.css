@@ -1,0 +1,528 @@
+* {
+    -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+}
+
+body {
+    -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
+    -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
+    -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
+    background-attachment:fixed;
+    font-family: 'Roboto', sans-serif;
+    font-size:12px;
+    height:100%;
+    margin:0px;
+    padding:0px;
+    width:100%;
+}s
+
+/* Portrait layout (default) */
+.app {
+    position:absolute;             /* position in the center of the screen */
+    left:50%;
+    top:50%;
+    height:50px;                   /* text area height */
+    width:225px;                   /* text area width */
+    text-align:center;
+    padding:180px 0px 0px 0px;     /* image height is 200px (bottom 20px are overlapped with text) */
+    margin:-115px 0px 0px -112px;  /* offset vertical: half of image height and text area height */
+                                   /* offset horizontal: half of text area width */
+}
+
+/* Landscape layout (with min-width) */
+@media screen and (orientation landscape) {
+    .app {
+        background-position:left center;
+        padding:75px 0px 75px 170px;  /* padding-top + padding-bottom + text area = image height */
+        margin:-90px 0px 0px -198px;  /* offset vertical: half of image height */
+                                      /* offset horizontal: half of image width and text area width */
+    }
+}
+
+h1 {
+    font-size:24px;
+    font-weight:normal;
+    margin:0px;
+    overflow:visible;
+    padding:0px;
+    text-align:center;
+}
+
+.event {
+    border-radius:4px;
+    -webkit-border-radius:4px;
+    color:#FFFFFF;
+    font-size:12px;
+    margin:0px 30px;
+    padding:2px 0px;
+}
+
+.event.listening {
+    background-color:#333333;
+    display:block;
+}
+
+.event.received {
+    background-color:#4B946A;
+    display:none;
+}
+
+@keyframes fade {
+    from { opacity: 1.0; }
+    50% { opacity: 0.4; }
+    to { opacity: 1.0; }
+}
+
+@-webkit-keyframes fade {
+    from { opacity: 1.0; }
+    50% { opacity: 0.4; }
+    to { opacity: 1.0; }
+}
+
+.blink {
+    animation:fade 3000ms infinite;
+    -webkit-animation:fade 3000ms infinite;
+}
+
+#header {
+  position: fixed;
+  width: 100vw;
+  height: 10vh;
+  background-color:#AF7AC5;
+  z-index: 1;
+}
+
+#header h1 {
+  color: white;
+  margin-top: 2%;
+  font-size: 1.8rem;
+}
+
+#side_buttons {
+  z-index:0;
+  position: absolute;
+  margin-top: 10vh;
+  width: 25vw;
+  height: 90vh;
+}
+
+#main_background {
+  height: 59vh;
+  background-color:#898989;
+  padding-top: 1vh;
+}
+
+.button {
+  font-family: 'Roboto', sans-serif;
+	font-size: 2rem;
+	text-decoration:none;
+  display: block;
+  width: 20vw;
+  height: 8vh;
+  padding: 0;
+  background-color:white;
+  margin: 0 auto;
+  border-style: solid;
+  border-width: medium;
+  border-radius: 4px;
+  margin-top: 1vh;
+}
+
+#nurse_button {
+  color: #599bb3;
+  border-color: #599bb3;
+}
+#pain_button{
+  color:#117A65;
+  border-color: #117A65;
+}
+#need_button {
+  background-color: #AF7AC5;
+  border-color: #AF7AC5;
+  color:white;
+}
+#feel_button {
+  color: #7D3C98;
+  border-color: #7D3C98;
+}
+#social_button {
+  color:#F4D03F;
+  border-color: #F4D03F;
+}
+#room_button {
+  color: #F39C12;
+  border-color: #F39C12;
+}
+
+#words {
+  position: absolute;
+  background-color: #D8D8D8;
+  width: 25vw;
+  height: 30vh;
+  display: block;
+  border: none;
+  padding: 0;
+}
+
+.phrase {
+  font-family: 'Roboto', sans-serif;
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 3%;
+  position: relative;
+  outline: none;
+  border: none;
+  padding: 5px;
+  font-size: 1.6rem;
+  background-color: #34495E;
+  color: white;
+  padding-right: 3vw;
+  padding-left: 3vw;
+  border-radius: 4px;
+}
+
+#maybe {
+  padding-right: 5vw;
+  padding-left: 5vw;
+}
+
+#dont {
+  padding-right: 2vw;
+  padding-left: 2vw;
+}
+
+.greetings {
+  font-family: 'Roboto', sans-serif;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 4vh;
+}
+.small_button {
+  margin: 0 auto;
+  background-color: #34495E;
+  color: white;
+  border: none;
+  font-size: 1.6rem;
+  padding-left: 2.5vw;
+  padding-right: 2.5vw;
+  border-radius: 4px;
+}
+
+#main_page {
+  background-color: #EAEDED;
+  position: absolute;
+  width: 75vw;
+  height: 90vh;
+  top: 10vh;
+  left: 25vw;
+}
+
+#content {
+  width: 70vw;
+  height: 70vh;
+  margin: 4vh;
+}
+
+#patientRoom {
+  position: relative;
+  width: 65vw;
+  height: 60vh;
+}
+
+.overTop h1 {
+  width: 13vw;
+  height: 12vh;
+  position: absolute;
+}
+
+.image_div {
+  position: absolute;
+  width: 13vw;
+  height: 12vh;
+}
+
+.rowOne {
+  position: absolute;
+  width: 65vw;
+  height: 12vh;
+  background-color: none;
+  text-align: left;
+}
+
+.rowTwo {
+  margin-top: 12vh;
+  position: absolute;
+  width: 65vw;
+  height: 12vh;
+  background-color: none;
+  text-align: left;
+}
+
+.rowThree {
+  margin-top: 24vh;
+  position: absolute;
+  width: 65vw;
+  height: 12vh;
+  background-color: none;
+  text-align: left;
+}
+
+.rowFour {
+  margin-top: 36vh;
+  position: absolute;
+  width: 65vw;
+  height: 12vh;
+  background-color: none;
+  text-align: left;
+}
+
+.rowFive {
+  margin-top: 48vh;
+  position: absolute;
+  width: 65vw;
+  height: 12vh;
+  background-color: none;
+  text-align: left;
+}
+
+
+.overTop {
+  position: absolute;
+  width: 65vw;
+  height: 60vh;
+  background-color: transparent;
+  margin: 4vh;
+}
+
+#take_photo{
+  width: 61vw;
+  height: 5vh;
+  margin-left: 4vw;
+  background-color: #4A4A4A;
+  border-radius: 2px;
+}
+
+#take_photo h3 {
+  margin-top: 1vh;
+  width: 61vw;
+  font-family: 'Roboto', sans-serif;
+  font-size: 2rem;
+  color: white;
+  text-align: center;
+  margin-top: 1vh;
+}
+
+.page_content {
+  text-align: center;
+  margin: 0 auto;
+}
+
+#nurse_icon {
+  margin-top: 20vh;
+}
+
+#welcome {
+  font-family: 'PT Sans Narrow', sans-serif;
+  font-size: 2rem;
+  color:#2C3E50;
+}
+
+#speech {
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 4vh;
+}
+
+#speech_text {
+  font-family: 'Roboto', sans-serif;
+  width: 40vw;
+  height:5vh;
+  font-size: 1.5rem;
+  border-color:#898989;
+  border-width: medium;
+  border-style: solid;
+  border-radius: 4px;
+  text-shadow: none;
+}
+
+#speech_submit {
+  font-family: 'Roboto', sans-serif;
+  height:5vh;
+  padding-left: 2vw;
+  padding-right: 2vw;
+  margin-left: 1vw;
+  color:white;
+  background-color:#4A4A4A;
+  font-size: 1.5rem;
+  border-color: #4A4A4A;
+  border-style: solid;
+  border-radius: 4px;
+}
+
+#need_panel {
+  display: none;
+  margin: 0 auto;
+  text-align: center;
+  margin-left: 8vw;
+  background-color: #34495E;
+  width: 60vw;
+  height: 50vh;
+  margin-top: 10vh;
+  border-radius: 5px;
+  color: white;
+}
+
+#need_headers h1 {
+  margin-top: 5vh;
+  font-size: 2rem;
+}
+
+#call_nurse {
+  display: none;
+  margin: 0 auto;
+  text-align: center;
+  margin-left: 8vw;
+  background-color: #34495E;
+  width: 60vw;
+  height: 50vh;
+  margin-top: 10vh;
+  border-radius: 5px;
+  color: white;
+}
+
+#call_nurse_icon {
+  margin-top: 8vh;
+  margin-bottom: 4vh;
+}
+
+.cancel_button {
+  font-family: 'Roboto', sans-serif;
+  width: 10%;
+  height: 5%;
+  border-radius: 5px;
+  background-color: #CCD1D1;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 5%;
+  padding: 1.5%;
+  color: black;
+  font-size: 1.2rem;
+}
+
+.three_buttons {
+  margin-top: 4vh;
+}
+
+.square_button {
+  vertical-align:top;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.2rem;
+  display: inline-block;
+  width: 20vw;
+  height: 20vh;
+  background-color: #34495E;
+  color: white;
+  margin-left: 0.5vw;
+  margin-right: 0.5vw;
+}
+
+.square_button img {
+  margin-top: 2vh;
+  margin-bottom: 1vh;
+  display: inline;
+}
+
+/* Loading circle */
+.circle {
+  width: 10px;
+  height: 10px;
+  border-radius: 14px;
+  border: 2px solid white;
+  margin: 10px;
+  animation: rotate 2s infinite linear;
+  animation-fill-mode: both;
+  display: inline-block;
+}
+
+.circle:nth-of-type(2) {
+    animation: rotate2 2s infinite linear;
+  animation-fill-mode: both;
+}
+
+.circle:nth-of-type(3) {
+    animation: rotate3 2s infinite linear;
+  animation-fill-mode: both;
+}
+
+@keyframes rotate {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  25% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  75% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  85% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+
+@keyframes rotate2 {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  25% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  75% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  85% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+
+@keyframes rotate3 {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  75% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  85% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
