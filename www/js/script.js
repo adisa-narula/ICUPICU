@@ -118,7 +118,7 @@ function control(object) {
 
 function speak(message) {
   var msg = new SpeechSynthesisUtterance(message);
-  msg.rate = 0.5;
+  msg.rate = 1;
   window.speechSynthesis.speak(msg);
   var voices = window.speechSynthesis.getVoices();
   // console.log(voices);
