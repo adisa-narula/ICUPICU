@@ -43,18 +43,41 @@ function pain(part) {
 }
 
 function painScale(number) {
-  var scaleID = "#pain"+number;
+  var text;
+  if(number == 0) {
+    text = "No Hurt";
+  }
+  else if (number == 2) {
+    text = "Hurts Little Bit";
+  }
+  else if (number == 4) {
+    text = "Hurts Little More";
+  }
+  else if (number == 6) {
+    text = "Hurts Even More";
+  }
+  else if (number == 8) {
+    text = "Hurts Whole Lot";
+  }
+  else {
+    text = "Hurts Worst"
+  }
   $("#pain_scale").fadeOut("fast", function() {
     var pain = "<br><br><h1> "+ body_part + " Pain </h1>";
-    var scale = "<br><h1> Scale: " + "</h1><br><br>";
+    var scale = "<h1> " + text + "</h1><br><br>";
     $("#pain_headers").empty();
     $("#pain_headers").append(pain);
     $("#pain_headers").append(scale);
-    $(scaleID).show("fast");
-    $("#pain_panel").show(1000, function(){
-      speak("My " + body_part + " hurts and the pain scale is " + number);
+    var img = $('<img>');
+    img.attr('src', '../img/pain'+ number + '.png');
+    img.attr('width', '70px');
+    img.attr('height', '70px');
+
+    $("#pain_headers").append(img);
+
+    $("#pain_panel").show(1000, function() {
+      speak("My " + body_part + " " + text);
       $(this).delay(4000).fadeOut("slow", function() {
-        $(scaleID).hide();
         $("#content").fadeIn();
       });
     });

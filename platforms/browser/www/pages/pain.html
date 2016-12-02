@@ -3,6 +3,8 @@
 <head>
 
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow" rel="stylesheet">
+
 
     <meta charset="utf-8" />
     <meta name="format-detection" content="telephone=no" />
@@ -93,18 +95,32 @@
       <div id="pain_scale">
         <br><br><div id="pain_title"aria-hidden="true"><h1>Select Pain Scale</h1></div>
         <div class="pain_circles">
-          <div class="pain_circle" style="background-color:#154360;" onclick="painScale(1)"> <p>1</p> </div>
-          <div class="pain_circle" style="background-color:#1F618D;" onclick="painScale(2)"> <p>2</p> </div>
-          <div class="pain_circle" style="background-color:#3498DB;" onclick="painScale(3)"> <p>3</p> </div>
-          <div class="pain_circle" style="background-color:#48C9B0;" onclick="painScale(4)"> <p>4</p> </div>
-          <div class="pain_circle" style="background-color:#82E0AA;" onclick="painScale(5)"> <p>5</p> </div>
+          <div class="pain_circle" onclick="painScale(0)"> <img src="../img/pain0.png"></div>
+          <div class="pain_circle" onclick="painScale(2)"> <img src="../img/pain2.png"></div>
+          <div class="pain_circle" onclick="painScale(4)"> <img src="../img/pain4.png"></div>
+          <div class="pain_circle" onclick="painScale(6)"> <img src="../img/pain6.png"></div>
+          <div class="pain_circle" onclick="painScale(8)"> <img src="../img/pain8.png"></div>
+          <div class="pain_circle" onclick="painScale(10)"> <img src="../img/pain10.png"></div>
         </div>
         <div class="pain_circles">
-          <div class="pain_circle" style="background-color:#F1C40F;" onclick="painScale(6)"> <p>6</p> </div>
-          <div class="pain_circle" style="background-color:#F39C12;" onclick="painScale(7)"> <p>7</p> </div>
-          <div class="pain_circle" style="background-color:#EC7063;" onclick="painScale(8)"> <p>8</p> </div>
-          <div class="pain_circle" style="background-color:#E74C3C;" onclick="painScale(9)"> <p>9</p> </div>
-          <div class="pain_circle" style="background-color:#B03A2E;" onclick="painScale(10)"> <p>10</p> </div>
+          <div class="pain_description" aria-hidden="tre"> 0 <br><br>
+            No <br> Hurt
+          </div>
+          <div class="pain_description"  aria-hidden="tre"> 2 <br><br>
+            Hurts <br> Little Bit
+          </div>
+          <div class="pain_description"  aria-hidden="tre"> 4 <br><br>
+            Hurts <br> Little More
+          </div>
+          <div class="pain_description"  aria-hidden="tre"> 6 <br><br>
+            Hurts <br> Even Bit
+          </div>
+          <div class="pain_description"  aria-hidden="tre"> 8 <br><br>
+            Hurts <br> Whole Lot
+          </div>
+          <div class="pain_description"  aria-hidden="tre"> 10 <br><br>
+            Hurts <br> Worst
+          </div>
         </div>
         <div class ="cancel_button" onclick="cancelPain('pain')">
           Cancel
