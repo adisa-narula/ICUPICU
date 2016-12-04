@@ -1,9 +1,9 @@
 var body_part;
 
-$.getJSON("data/information.json", function(data)
-{
-    $("#welcome").append("Welcome " + data.first_name + " " + data.last_name);
-});
+// $.getJSON("data/information.json", function(data)
+// {
+//     $("#welcome").append("Welcome " + data.first_name + " " + data.last_name);
+// });
 
 $('.speech-form').on('submit', function () {
     var speech = $('#speech_text').val();
@@ -84,11 +84,21 @@ function painScale(number) {
   });
 }
 
-function need(action) {
+function need(action, file, width, height) {
+  console.log(width + " " + height);
+
+  var w = width * 2 + 'px';
+  var h = height * 2 + 'px';
+
   var message = "I need " + action;
   $( "#content" ).fadeOut("fast", function() {
     var need = "<h1> "+ message + " </h1>";
-    var img = "<br><br><br><img src='../img/callnurse.png'>"
+    var img = $('<img>');
+    img.attr('src', '../img/'+ file);
+    img.attr('width', 1);
+    img.attr('width', w);
+    img.attr('height', h);
+
     $("#need_photo").empty();
     $("#need_photo").append(img);
     $("#need_headers").empty();

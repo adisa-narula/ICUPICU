@@ -284,17 +284,17 @@ h1 {
 .pain_circle {
   display: inline-block;
   margin-top: 8vh;
-  margin-left: 1.5vw;
-  margin-right: 2vw;
+  margin-left: 1vw;
+  margin-right: 1vw;
 }
 
 .pain_description {
   font-family: 'Roboto', sans-serif;
   display: inline-block;
-  margin: 2%;
-  margin-left: 2%;
-  margin-right:1.5%;
-  font-size: 1.1rem;
+  margin-top: 2%;
+  margin-left: 1vw;
+  margin-right:1vw;
+  font-size: 1.2rem;
 }
 
 .pain_circle p {
