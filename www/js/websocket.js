@@ -6,7 +6,7 @@ Built from the example code offered at https://www.npmjs.com/package/ws
 Modified by OllieBck Nov. 20, 2016
 */
 
-var host = "192.168.1.7";
+var host = "192.168.1.2";
 var ws = new WebSocket('ws://' + host + ':9111');
 var light_state = null;
 var tv_state = null;
